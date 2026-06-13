@@ -1,0 +1,22 @@
+{
+  "annotations": {"list": []},
+  "panels": [
+    {
+      "type": "stat",
+      "title": "Connected Agents",
+      "datasource": "Prometheus",
+      "targets": [{"expr": "agentmink_connected_agents", "refId": "A"}],
+      "gridPos": {"h": 6, "w": 6, "x": 0, "y": 0}
+    },
+    {
+      "type": "graph",
+      "title": "PII Events (rate)",
+      "datasource": "Prometheus",
+      "targets": [{"expr": "rate(agentmink_pii_events_total[1m])", "refId": "A"}],
+      "gridPos": {"h": 8, "w": 12, "x": 6, "y": 0}
+    }
+  ],
+  "schemaVersion": 18,
+  "title": "AgentMink Overview",
+  "version": 1
+}
